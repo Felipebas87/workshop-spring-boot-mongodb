@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import com.felipebarros.workshopmongo.domain.Post;
-import com.felipebarros.workshopmongo.domain.User;
+
 
 
 public class PostDTO implements Serializable{
@@ -14,7 +14,7 @@ public class PostDTO implements Serializable{
 	private Date date;
 	private String title;
 	private String body;
-	private User author;
+	private AuthorDTO author;
 	
 	public PostDTO() {
 		
@@ -65,11 +65,11 @@ public class PostDTO implements Serializable{
 		this.body = body;
 	}
 
-	public User getAuthor() {
+	public AuthorDTO getAuthor() {
 		return author;
 	}
 
-	public void setAuthor(User author) {
+	public void setAuthor(AuthorDTO author) {
 		this.author = author;
 	}
 }
